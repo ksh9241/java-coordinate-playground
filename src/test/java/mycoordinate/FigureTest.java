@@ -47,6 +47,13 @@ public class FigureTest {
             new Point(10, 25);
         }).isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    void 포인트_값_구하기() {
+        Line l = new Line();
+        double result = l.pointValue(10, 14);
+        assertThat(result).isEqualTo(16);
+    }
     
     @Test
     void 라인_값_구하기() throws Exception {
